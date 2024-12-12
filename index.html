@@ -1,4 +1,72 @@
-nj();
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<style>*{
+text-align:center; 
+margin:0; padding:0; font-family:arial, sans-serif; display:auto;  box-sizing:border-box;
+}
+body{height:100vh; 
+	background-color:#D5DED9;
+	display:flex;	
+	align-items:center; 
+	justify-content:center;
+	opacity:0.9;
+}
+#td{
+	display:flex;
+	flex-direction:column;
+	align-items:center; 
+	justify-content: space-evenly;
+	flex-wrap:wrap;
+	width:66vw;
+	height:72vh;
+	border:solid 6px #5D513F;
+	background-color:#99B2B7;
+	opacity:0.9;
+}
+
+h1{
+	font-size:9vw; color:#3C3930;
+}
+p{
+
+	font-size:4.2vw;
+	color:#656A67;
+	text-align:center;
+}
+#cmp{
+	width:54vw;
+	height:9vh;
+	background-color:#D5DED9;
+	font-size:9vh;
+	font-weight:bold;
+	border:none;
+
+}
+#in{width:100%;}
+#in button{
+	width:42vw;
+	height:6vh;
+	font-size:4.2vh;
+	font-weight:bold;
+	border:none;
+	background-color:#7A6A53;
+	cursor:pointer;
+}#in button:hover{opacity:0.3;}
+#fls{color:red;}
+#vdd{color:green;  }</style>
+</head>
+
+<body>
+<div id="td">
+	<h1></h1>
+	<p></p>
+	<input id="cmp" type="number" hidden>
+	<div id="in" hidden></div> 
+   </div>
+	<script>nj();
 
 let nmmx ='';
 let sctnm = '';
@@ -7,7 +75,7 @@ var tntvs = 1;
 function nmmxx(){
 	nmmx = document.querySelector('input').value;
 	sctnm = nvnm();
-	mn('Anon Num', `Escolha um numero de 1 a ${nmmx}`);
+	mn('Anon Number', `Escolha um numero de 1 a ${nmmx}`);
 	lmpcmp();
 	document.getElementById('in').innerHTML =('<button id="in" onclick="vrct()">CHUTAR</button>');
 }
@@ -57,11 +125,13 @@ function lmpcmp(){
 	
 }
 function nj(){
-	mn('Anon Num', 'Escolha o número limite');
+	mn('Anon Number', 'Escolha o número limite');
 	document.getElementById('cmp').removeAttribute('hidden');
 	document.getElementById('in').removeAttribute('hidden');
 	document.getElementById('in').innerHTML =('<button  onclick="nmmxx()">INICIAR</button>');
 	return tntvs = 1;
 	lmpcmp();
 
-}
+}</script>
+</body>
+</html>
